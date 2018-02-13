@@ -32,6 +32,7 @@ import UIKit
 
  - Blank:                   Blank animation.
  - BallPulse:               BallPulse animation.
+ - SquarePulse:             SquarePulse animation.
  - BallGridPulse:           BallGridPulse animation.
  - BallClipRotate:          BallClipRotate animation.
  - SquareSpin:              SquareSpin animation.
@@ -73,10 +74,16 @@ public enum NVActivityIndicatorType: Int {
     case blank
     /**
      BallPulse.
-
+     
      - returns: Instance of NVActivityIndicatorAnimationBallPulse.
      */
     case ballPulse
+    /**
+     SquarePulse.
+     
+     - returns: Instance of NVActivityIndicatorAnimationSquarePulse.
+     */
+    case squarePulse
     /**
      BallGridPulse.
 
@@ -272,6 +279,8 @@ public enum NVActivityIndicatorType: Int {
             return NVActivityIndicatorAnimationBlank()
         case .ballPulse:
             return NVActivityIndicatorAnimationBallPulse()
+        case .squarePulse:
+            return NVActivityIndicatorAnimationSquarePulse()
         case .ballGridPulse:
             return NVActivityIndicatorAnimationBallGridPulse()
         case .ballClipRotate:
